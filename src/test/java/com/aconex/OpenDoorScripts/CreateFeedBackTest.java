@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import static com.aconex.OpenDoorLib.genericLib.Driver.DRIVER;
 
-public class CreateFeedBack {
+public class CreateFeedBackTest {
     ExcelLib excelLib;
     WebDriverCommonLib webDriverCommonLib;
     CreateFeedBackpg createFeedBack;
