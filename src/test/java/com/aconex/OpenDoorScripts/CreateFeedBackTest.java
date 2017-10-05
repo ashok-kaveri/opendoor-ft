@@ -38,9 +38,10 @@ public class CreateFeedBackTest {
         createFeedBack.selectRating(rating);
         createFeedBack.enterFeedBack(feedBack);
         createFeedBack.selectLocation(location);
-        createFeedBack.enterTitle(title);
+      //  createFeedBack.enterTitle(title);
+        createFeedBack.verifySubmitButton();
         createFeedBack.submit();
-        DRIVER.close();
+        DRIVER.quit();
 
     }
 

@@ -4,7 +4,10 @@ import com.aconex.OpenDoorLib.genericLib.Driver;
 import com.aconex.OpenDoorLib.genericLib.WebDriverCommonLib;
 import com.aconex.OpenDoorLib.pageObjRepo.OpenDoorPage;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import static com.aconex.OpenDoorLib.genericLib.Driver.DRIVER;
+import static com.aconex.OpenDoorLib.genericLib.Driver.systemPropeties;
 import static com.aconex.OpenDoorLib.genericLib.WebDriverCommonLib.select;
 
 public class CreateFeedBackpg {
@@ -64,6 +67,15 @@ public class CreateFeedBackpg {
         openDoorPage = PageFactory.initElements(DRIVER, OpenDoorPage.class);
         WebDriverCommonLib.waitForPageToLoad();
         openDoorPage.idea().click();
+    }
+
+    //This method is for verifying submit btn is enabled or not
+    public void verifySubmitButton() throws InterruptedException{
+        Boolean var;
+        openDoorPage = PageFactory.initElements(DRIVER, OpenDoorPage.class);
+        WebDriverCommonLib.waitForPageToLoad();
+        var=openDoorPage.submit().isEnabled();
+        Assert.assertTrue(var);
     }
 
 }
