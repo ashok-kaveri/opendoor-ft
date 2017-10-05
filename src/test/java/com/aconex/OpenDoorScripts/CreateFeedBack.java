@@ -10,14 +10,13 @@ import static com.aconex.OpenDoorLib.genericLib.Driver.DRIVER;
 public class CreateFeedBack {
     ExcelLib excelLib;
     WebDriverCommonLib webDriverCommonLib;
-    //Open Door
     CreateFeedBackpg createFeedBack;
 
+    //Data Setting
     String name = "OpenDoorLib"+ Math.random();
     String feedBack="Something"+Math.random();
     String location = "Mumbai";
     String rating = "5";
-
 
     @BeforeClass
     public void createFeedBack() throws IOException, InvalidFormatException, InterruptedException {
@@ -27,8 +26,10 @@ public class CreateFeedBack {
         createFeedBack = new CreateFeedBackpg();
     }
 
+    //Create feed back
     @Test(priority = 1)
     public void userFeedBack() throws InterruptedException {
+        Thread.sleep(2000);
         WebDriverCommonLib.waitForPageToLoad();
         createFeedBack.enterName(name);
         createFeedBack.enterFeedBack(feedBack);
