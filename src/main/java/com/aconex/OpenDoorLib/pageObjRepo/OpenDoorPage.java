@@ -66,4 +66,13 @@ public class OpenDoorPage {
         return title;
     }
 
+    //Clicking Idea link
+    @FindBy(xpath = "html/body/div[1]/div/category/div[2]/div[1]/a")
+    private WebElement idea;
+
+    public WebElement idea(){
+        return idea;
+    }
+
+
 }

@@ -59,4 +59,11 @@ public class CreateFeedBackpg {
         openDoorPage.title().sendKeys(title);
     }
 
+    //This method is for clicking Idea link
+    public void idea() throws InterruptedException{
+        openDoorPage = PageFactory.initElements(DRIVER, OpenDoorPage.class);
+        WebDriverCommonLib.waitForPageToLoad();
+        openDoorPage.idea().click();
+    }
+
 }

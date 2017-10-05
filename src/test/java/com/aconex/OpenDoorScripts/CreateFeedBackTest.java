@@ -33,6 +33,7 @@ public class CreateFeedBackTest {
         Thread.sleep(2000);
         WebDriverCommonLib.waitForPageToLoad();
         createFeedBack.shareFeedBack();
+        createFeedBack.idea();
         createFeedBack.enterName(name);
         createFeedBack.selectRating(rating);
         createFeedBack.enterFeedBack(feedBack);
