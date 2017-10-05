@@ -26,16 +26,21 @@ public class OpenDoorPage {
         return location;
     }
 
-    //Rating select
-    @FindBy(xpath = "//div[@class=\"bliss\"]/img['+rating+']")
-    private WebElement rating;
-    //  @FindBy(xpath = "html/body/div[1]/form/div[4]/label[1]")
-    //@FindBy(xpath = "html/body/div[1]/form/div[4]/label['+rating+']")
-
 
     public WebElement selectRating(int rating){
         return this.rating;
     }
+
+    //Rating select
+    @FindBy(xpath = "//div[@class=\"bliss\"]/img[5]")
+    private WebElement rating;
+    //  @FindBy(xpath = "html/body/div[1]/form/div[4]/label[1]")
+    //@FindBy(xpath = "html/body/div[1]/form/div[4]/label['+rating+']")
+    // find(:xpath, "//option[@label='#{outcome}']", :wait => 60).click
+    //li[@title='"+projectName+"']"))
+
+
+
 
     //Submit button
     @FindBy(xpath = "//button[@class=\"btn btn-default\"]")
