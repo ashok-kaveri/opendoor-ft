@@ -36,7 +36,6 @@ public class CreateFeedBack {
         createFeedBack.selectLocation(location);
         createFeedBack.selectRating(rating);
         createFeedBack.submit();
-
     }
 
 }
