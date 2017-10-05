@@ -2,6 +2,7 @@ package com.aconex.OpenDoorLib.genericLib;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Driver {
 
@@ -12,15 +13,17 @@ public class Driver {
 
     //The below code block is for chrome driver as well as can be used for firefox
     public static void systemPropeties(){
-        System.setProperty("webdriver.chrome.driver","/Users/akumarn/Documents/chromedriver/chromedriver");
+//        System.setProperty("webdriver.chrome.driver","/Users/akumarn/Documents/chromedriver/chromedriver");
         //System.setProperty("webdriver.ie.driver","C:\\IEDriverForSelenium\\IEDriverServer.exe");
-
-
+        
     }
 
     public static WebDriver DRIVER(){
         systemPropeties();
-        return new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--disable-gpu");
+        return new ChromeDriver(chromeOptions);
         //return new FirefoxDriver();
         //return new InternetExplorerDriver();
 

@@ -1,0 +1,14 @@
+.gradle
+.idea
+*.iws
+*.iml
+*.ipr
+build
+node_modules
+.testpackage
+target
+*.db
+.vagrant
+*.log
+*.retry
+*.DS_Store

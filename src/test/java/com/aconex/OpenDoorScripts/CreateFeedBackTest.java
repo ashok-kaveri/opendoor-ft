@@ -2,6 +2,7 @@ package com.aconex.OpenDoorLib.genericLib;
 
 import com.aconex.OpenDoorLib.CreateFeedBackpg;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.io.IOException;
@@ -38,11 +39,15 @@ public class CreateFeedBackTest {
         createFeedBack.selectRating(rating);
         createFeedBack.enterFeedBack(feedBack);
         createFeedBack.selectLocation(location);
-      //  createFeedBack.enterTitle(title);
+        createFeedBack.enterTitle(title);
         createFeedBack.verifySubmitButton();
         createFeedBack.submit();
-        DRIVER.quit();
 
+    }
+
+    @AfterClass
+    public void after() {
+        DRIVER.quit();
     }
 
 }
