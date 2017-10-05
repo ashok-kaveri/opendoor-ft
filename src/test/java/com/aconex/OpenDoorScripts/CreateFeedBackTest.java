@@ -39,6 +39,7 @@ public class CreateFeedBackTest {
         createFeedBack.selectLocation(location);
         createFeedBack.enterTitle(title);
         createFeedBack.submit();
+        DRIVER.close();
 
     }
 
