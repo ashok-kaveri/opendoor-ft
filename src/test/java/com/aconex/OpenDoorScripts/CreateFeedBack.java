@@ -16,7 +16,8 @@ public class CreateFeedBack {
     String name = "OpenDoorLib"+ Math.random();
     String feedBack="Something"+Math.random();
     String location = "Mumbai";
-    String rating = "5";
+    int rating = 5;
+    String title="Ashoka Title"+Math.random();
 
     @BeforeClass
     public void createFeedBack() throws IOException, InvalidFormatException, InterruptedException {
@@ -31,11 +32,14 @@ public class CreateFeedBack {
     public void userFeedBack() throws InterruptedException {
         Thread.sleep(2000);
         WebDriverCommonLib.waitForPageToLoad();
+        createFeedBack.shareFeedBack();
         createFeedBack.enterName(name);
+        createFeedBack.selectRating(rating);
         createFeedBack.enterFeedBack(feedBack);
         createFeedBack.selectLocation(location);
-        createFeedBack.selectRating(rating);
+        createFeedBack.enterTitle(title);
         createFeedBack.submit();
+
     }
 
 }

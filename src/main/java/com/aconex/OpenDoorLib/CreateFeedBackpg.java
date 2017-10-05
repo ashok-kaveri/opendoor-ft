@@ -32,10 +32,10 @@ public class CreateFeedBackpg {
     }
 
     //This method is for selecting stars
-    public void selectRating(String rating) throws InterruptedException{
+    public void selectRating(int rating) throws InterruptedException{
         openDoorPage = PageFactory.initElements(DRIVER, OpenDoorPage.class);
         WebDriverCommonLib.waitForPageToLoad();
-        openDoorPage.selectRating().click();
+        openDoorPage.selectRating(rating).click();
     }
 
     //This method is for submitting the feed back
@@ -45,5 +45,18 @@ public class CreateFeedBackpg {
         openDoorPage.submit().click();
     }
 
+    //This method is for clicking share feedback button
+    public void shareFeedBack() throws InterruptedException{
+        openDoorPage = PageFactory.initElements(DRIVER, OpenDoorPage.class);
+        WebDriverCommonLib.waitForPageToLoad();
+        openDoorPage.shareFeedBack().click();
+    }
+
+    //This method is for adding the title
+    public void enterTitle(String title) throws InterruptedException{
+        openDoorPage = PageFactory.initElements(DRIVER, OpenDoorPage.class);
+        WebDriverCommonLib.waitForPageToLoad();
+        openDoorPage.title().sendKeys(title);
+    }
 
 }
